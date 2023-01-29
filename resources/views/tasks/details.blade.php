@@ -60,7 +60,7 @@
                 {{method_field('DELETE')}}
                 <a href="#" class="badge badge-success p-1" data-toggle="modal" data-target="#addfile{{$activity->id}}"><i class="fas fa-paperclip"></i> Add files</a>
                 <a href="#" class="badge badge-success p-1" data-toggle="modal" data-target="#report{{$activity->id}}"><i class="fas fa-edit"></i> Update activity</a>
-                @if($attachment->user_id == Auth::id())
+                @if($activity->user_id == Auth::id())
                 <button type="submit" class="badge badge-danger"><i class="fas fa-trash"></i> Delete </button>
                 @endif
             </form>
