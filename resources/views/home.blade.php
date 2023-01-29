@@ -6,12 +6,17 @@
     <div>
         <span style="font-size: 25px;">{{$title}}</span>
         <span>
+        <button style="float: right;" type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">
+        Open new task
+        </button>
             @if(Auth::user()->user_type == "leader")
             <a style="float: right;" class="btn btn-success" href="{{url('users')}}">User Tasks</a>
             <hr>
             @endif
         </span>
     </div>
+
+    <hr>
     
 
     <div class="card">
@@ -19,11 +24,9 @@
         @foreach($pending_tasks as $task)            
             <div class="task">
 
-                <a style="text-decoration:none;" href="{{route('tasks.show',$task->id)}}">
+                <a style="text-decoration:none;" class="text-success" href="{{route('tasks.show',$task->id)}}">
                     <h5>{{$task->title}}</h5>
-                </a>
-
-                
+                </a>               
 
                 <p class="text-muted">{!! $task->description !!}</p>
 
@@ -43,6 +46,8 @@
             @endforeach          
         </div>
     </div>
+
+    @include('layouts.add_task')
  
 </div>
 @endsection

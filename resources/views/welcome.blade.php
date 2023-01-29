@@ -6,6 +6,8 @@
 
         <title>{{ config('app.name') }}</title>
 
+        <link rel="shortcut icon" href="{{ asset('images/logo.png') }}">
+
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
 

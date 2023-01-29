@@ -9,6 +9,9 @@
 
     <title>{{ config('app.name') }}</title>
 
+    
+    <link rel="shortcut icon" href="{{ asset('images/logo.png') }}">
+
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
 
@@ -25,6 +28,8 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+
     @yield('styles')
 </head>
 <body>
