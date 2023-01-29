@@ -6,7 +6,7 @@
     <span style="font-size: 25px;">{{$title}}</span>
     <span>
         @if(Auth::user()->user_type == "admin")
-        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">
+        <button style="float: right;" type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">
             New user
         </button>
         <hr>
