@@ -20,10 +20,13 @@
             @foreach($users as $user)            
             <div class="task">
                 <a style="text-decoration:none;" href="{{route('users.show',$user->id)}}">
-                    <p>{{$user->name}}</p>
-                    <span class="text-muted">{!! $user->email !!}</span>
-                    <span class="text-muted"><i class="fas fa-user"></i> {!! $user->user_type !!}</span>
-                    <i class="fas fa-book-reader"></i> Activities</a>
+                <p>{{$user->name}}</p>
+                <span class="text-muted">{!! $user->email !!}</span>
+                <span class="text-muted"><i class="fas fa-user"></i> {!! $user->user_type !!}</span>
+                <i class="fas fa-book-reader"></i> Activities</a><br>
+                @if($user->created_at != $user->updated_at)
+                   <span class="text-success"><i class="fas fa-clock"></i> Activated on {{$user->updated_at}}</span>
+                @endif
             </div>
             <hr>
             @endforeach            
