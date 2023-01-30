@@ -19,7 +19,8 @@
 
                 <p class="text-muted">{!! $task->description !!}</p>
 
-                <p><i class="fas fa-clock"></i> From {{$task->start_date}} to {{$task->end_date}}  <i class="fas fa-user"></i> {{$task->user->name}}</p>
+                <p><i class="fas fa-clock"></i> From {{$task->start_date}} to {{$task->end_date}}</p>
+                <p><i class="fas fa-user"></i> {{$task->user->name}}</p>
 
                 @if($task->taskUsers->count() > 0)
                 <span class="text-success">Other user on this task</span><br>
@@ -46,7 +47,7 @@
                     @else
                         <p class="text text-danger"><i class="fas fa-battery-half"></i> {{$task->status($task->id)}}</p>
                         <a href="#" class="badge badge-success p-1" data-toggle="modal" data-target="#adduser{{$task->id}}"><i class="fas fa-user"></i> Add users</a>
-                        <a href="{{route('tasks.show',$task->id)}}" class="badge badge-success p-1"><i class="fas fa-show"></i> View tasks</a>
+                        <a href="{{route('tasks.show',$task->id)}}" class="badge badge-success p-1"><i class="fas fa-show"></i> View activities</a>
                         @if($task->user_id == Auth::id())
                         <a href="#" class="badge badge-success p-1" data-toggle="modal" data-target="#edit_task{{$task->id}}"><i class="fas fa-edit"></i> Edit task</a>
                         <button type="submit" class="badge badge-danger"><i class="fas fa-trash"></i> Delete</button>

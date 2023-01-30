@@ -40,7 +40,7 @@
                     @endforeach
                 @endif
                 <p class="text text-danger"><i class="fas fa-battery-half"></i> {{$task->status($task->id)}}</p>
-                <a href="{{route('tasks.show',$task->id)}}" class="badge badge-success p-1"><i class="fas fa-show"></i> View tasks</a>              
+                <a href="{{route('tasks.show',$task->id)}}" class="badge badge-success p-1"><i class="fas fa-show"></i> View activities</a>              
                      
             </div>  
             <hr>
