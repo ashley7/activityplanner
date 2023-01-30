@@ -96,7 +96,7 @@
                     <img src="{{asset('images/logo.png')}}" alt="logo" width="50%">
                 </center>
                 <div class="title m-b-md">
-                    Acticity portal
+                    Activity portal
                 </div>   
                 
                 <center>
