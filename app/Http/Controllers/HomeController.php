@@ -38,7 +38,7 @@ class HomeController extends Controller
             
         }
 
-        $pending_tasks = Task::whereIn('id',$myTasks)->get();    
+        $pending_tasks = Task::whereIn('id',$myTasks)->orderBy('id','DESC')->get();    
 
         $data = [
             'pending_tasks'=>$pending_tasks,

@@ -30,7 +30,8 @@
 
                 <p class="text-muted">{!! $task->description !!}</p>
 
-                <p><i class="fas fa-clock"></i> From {{$task->start_date}} to {{$task->end_date}} <br> <i class="fas fa-user"></i> {{$task->user->name}}</p>
+                <p><i class="fas fa-clock"></i> From {{$task->start_date}} to {{$task->end_date}}</p>
+                <p><i class="fas fa-user"></i> {{$task->user->name}}</p>
 
                 @if($task->taskUsers->count() > 0)
                 <span class="text-success">Other user on this task</span><br>
