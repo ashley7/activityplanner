@@ -15,7 +15,7 @@
                     <input type="text" name="title" class="form-control">
 
                     <label for="description">Description</label>
-                    <textarea name="description" id="description" class="form-control" cols="30" rows="5"></textarea>
+                    <textarea name="description" id="description" class="form-control" cols="30" rows="3"></textarea>
 
                     <label for="start_date">Start date</label>
                     <input type="date" name="start_date" class="form-control">

@@ -105,7 +105,7 @@
                                     <input type="text" name="title" value="{{$task->title}}" class="form-control">
 
                                     <label for="description">Description</label>
-                                    <textarea name="description" id="description" class="form-control" cols="30" rows="5">{!! $task->description !!}</textarea>
+                                    <textarea name="description" id="description" class="form-control description" cols="30" rows="5">{!! $task->description !!}</textarea>
 
                                     <label for="start_date">Start date</label>
                                     <input type="date" name="start_date" value="{{$task->start_date}}" class="form-control">
@@ -138,6 +138,7 @@
 @endsection
 
 @section('styles')
+
 <style>
     .card .card-body .task{
       border-style: solid;

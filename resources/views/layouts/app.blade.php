@@ -127,5 +127,13 @@
             @yield('content')
         </main>
     </div>
+    @push('scripts')
+    <script src="https://cdn.ckeditor.com/4.20.1/basic/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace( 'description' );
+    </script>
+    @endpush
+
+    @stack('scripts')
 </body>
 </html>
