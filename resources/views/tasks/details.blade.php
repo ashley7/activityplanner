@@ -81,7 +81,7 @@
                                 <input type="text" name="title" value="{{$activity->title}}" class="form-control">
 
                                 <label for="description">Description</label>
-                                <textarea name="description" id="description" class="form-control" cols="30" rows="3">{!! $activity->description !!}</textarea>
+                                <textarea name="description" id="description2" class="form-control" cols="30" rows="3">{!! $activity->description !!}</textarea>
 
                                 <label for="results">Final remarks</label>
                                 <textarea name="results" id="results" class="form-control" cols="30" rows="3">{!! $activity->results !!}</textarea>
@@ -161,7 +161,7 @@
                         <input type="text" name="title" class="form-control">
 
                         <label for="description">Description</label>
-                        <textarea name="description" id="description" class="form-control" cols="30" rows="5"></textarea>
+                        <textarea name="description" id="description1" class="form-control" cols="30" rows="5"></textarea>
 
                         <input type="hidden" value="{{$task->id}}" name="task_id">
 

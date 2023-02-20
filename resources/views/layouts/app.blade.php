@@ -112,28 +112,29 @@
         </nav>
 
         <main class="py-4">
-        @if ($errors->any())
-        <div class="alert alert-danger alert-dismissible fade show" role="alert">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
-        </div>     
-        @endif
+            @if ($errors->any())
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>     
+            @endif
             @yield('content')
         </main>
     </div>
     @push('scripts')
-    <script src="https://cdn.ckeditor.com/4.20.1/basic/ckeditor.js"></script>
-    <script>
-        CKEDITOR.replace( 'description' );
-    </script>
+        <script src="https://cdn.ckeditor.com/4.20.1/basic/ckeditor.js"></script>
+        <script>
+            CKEDITOR.replace( 'description' ); 
+            CKEDITOR.replace( 'description1' );  
+            CKEDITOR.replace( 'description2' );                 
+        </script>
     @endpush
-
     @stack('scripts')
-</body>
+    </body>
 </html>
