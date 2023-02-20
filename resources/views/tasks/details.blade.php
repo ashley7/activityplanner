@@ -32,7 +32,7 @@
                     <span class="text-success">{{$activity->status}}</span>
                 @endif
             
-            <p class="text-muted">{{$activity->description}}</p>
+            <p class="text-muted">{!! $activity->description !!}</p>
 
             @foreach($activity->attachments as $attachment)
             
