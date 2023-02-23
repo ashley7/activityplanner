@@ -93,7 +93,7 @@ class TaskController extends Controller
 
         else
 
-            $status = ['pending','processing'];
+            $status = ['pending','processing','completed'];
 
         $data = [
             'task'=>$task,
